@@ -22,7 +22,7 @@
 - What is Ethernet?
 
 - What is routing?
-A Router is a process of selecting path along which the data can be transferred from source to the destination. Routing is performed by a special device known as a router.
+- A Router is a process of selecting path along which the data can be transferred from source to the destination. Routing is performed by a special device known as a router.
 
 A router is a networking device that forwards the packet based on the information available in the packet header and forwarding table.
 

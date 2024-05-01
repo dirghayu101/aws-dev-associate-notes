@@ -11,7 +11,7 @@
 9. In IPv6, instead of TTL we have hop limit. Self explanatory.
 
 # Quick Note about IPv4:
-- IP Octet are described from left to right. So, the first octet will be first 8 bit. Or in this IP address: 133.33.3.7, it will be 1.
+- IP Octet are described from left to right. So, the first octet will be first 8 bit. Or in this IP address: 133.33.3.7, it will be 133.
 - An IPv4 has two parts network and host part. You will start counting the network part from the first octet.
 - Subnet mask denotation: /16 or 255.255.0.0 are the same. If you do "OR operation" of 255.255.0.0 with the IP address, you will get just the host part.
 
@@ -27,8 +27,12 @@
 - So every time when a packet is transiting, you have to resolve the temporary IP to a MAC address for this encapsulation process.
 - When a packet reaches the destination IP router, ARP is used to convert that IP to the MAC address.
 
+Border Gateway Protocol (BGP) is the postal service of the Internet. When someone drops a letter into a mailbox, the Postal Service processes that piece of mail and chooses a fast, efficient route to deliver that letter to its recipient. Similarly, when someone submits data via the Internet, BGP is responsible for looking at all of the available paths that data could travel and picking the best route, which usually means hopping between autonomous systems.
 
+The Address Resolution Protocol (ARP) is a communication protocol used for discovering the link layer address, such as a MAC address, associated with a given internet layer address, typically an IPv4 address.
+
+# Refer: ./ref_SS/2-Network_layer.png
 
 # Protocols used by Layer 3:
 - Border Gateway Protocol: Ref: https://en.wikipedia.org/wiki/Border_Gateway_Protocol
-- Address Resolution Protocol 
+- Address Resolution Protocol
