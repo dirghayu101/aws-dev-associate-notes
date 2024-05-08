@@ -1,0 +1,1 @@
+Ref: ref_SS/7_stateful.png and ref_SS/7_stateless.png
