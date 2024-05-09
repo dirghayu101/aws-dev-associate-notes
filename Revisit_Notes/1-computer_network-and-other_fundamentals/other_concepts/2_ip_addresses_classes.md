@@ -10,4 +10,3 @@ Total IPv6 addresses: 340 trillion trillion
 - Private IP addresses and the number of available connection on those.
 - Which private IP address class should you choose for your VPC? These ranges help you in understanding that.
 
- 
