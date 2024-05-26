@@ -1,0 +1,23 @@
+{
+    "_comment": "This policy will be created indirectly by the cloudformation yaml file.",
+    "Version":"2012-10-17",
+    "Statement":[
+       {
+          "Sid":"statement1",
+          "Effect":"Allow",
+          "Action":[
+             "s3:*"
+          ],
+          "Resource":[
+             "arn:aws:s3:::*"
+          ]
+        },
+        {
+          "Effect": "Deny",
+          "Action": "s3:*",
+          "Resource": [
+            "arn:aws:s3:::catgifs", "arn:aws:s3:::catgifs/*"
+          ]
+        }
+     ]
+ }
