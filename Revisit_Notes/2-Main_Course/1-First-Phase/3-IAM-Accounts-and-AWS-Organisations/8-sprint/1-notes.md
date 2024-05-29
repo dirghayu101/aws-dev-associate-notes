@@ -13,3 +13,4 @@
 - There is a soft limit of 300 groups per account.
 - Groups don't allow nesting. A group can have no sub groups.
 - Groups are also not a true identity, they cannot be referenced as a principle in a policy. You can refer users and roles.
+
