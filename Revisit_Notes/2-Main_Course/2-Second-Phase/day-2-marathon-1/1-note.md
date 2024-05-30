@@ -77,3 +77,4 @@
 - KMS keys can be AWS owned or Customer Manged. Customer keys are more configurable. 
 - You can have aliases of an KMS key.
 - Every KMS key has a key policy associated with it.
+- KMS keys can only encrypt data up-to 4kb in size, so it uses DMK to perform any other sort of encryption.
