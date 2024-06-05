@@ -11,5 +11,8 @@ Checklist: These are the video lectures I watched.
 
 
 Date: 29/May/2024
+Course progression at the start: 23%
+Course progression at the end: 
 Time start: 9:35 AM
 Time end: 10:45 AM then had a class.
+
