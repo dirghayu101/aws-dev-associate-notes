@@ -1,0 +1,4 @@
+- Let's say you allocate a public IP to an EC2 instance, then on thing important that you have to know is that at no point, your OS of ec2 will be aware that it has a public IP. The record will be stored in the gateway and all the packet that addresses something in the public zone will have their private IP record modified to the public IP they are mapped to. Checkout screenshots for reference. Exam questions will trick you by asking you to allocate a public IP directly to an EC2 OS, which is not how it takes place.
+- Security group are associated with ENI. An elastic network interface is a logical networking component in a VPC that represents a virtual network card.
+- To use NAT instance instead of gateway, you need to disable a feature called source and destination check. Remember this feature.
+- Unlike NAT instances, where you can have ACLs and SGs, a NAT gateway cannot have these and you can only have knuckles in NAT.

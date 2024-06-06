@@ -1,0 +1,1 @@
+- Create a separate directory for replication demo SS. -> Refer it properly.
