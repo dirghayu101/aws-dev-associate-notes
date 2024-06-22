@@ -22,6 +22,6 @@ Checklist: These are the video lectures I have to watch.
 
 Date: 13/June/2024
 Course progression at the start: 28%
-Course progression at the end: 
+Course progression at the end: 33%
 Time start: 11 AM
-Time end: 2:25 PM then have a class.
+Time end: 20 June, 2 PM

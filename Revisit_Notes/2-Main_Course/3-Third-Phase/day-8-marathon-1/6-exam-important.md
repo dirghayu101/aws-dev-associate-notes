@@ -1,0 +1,1 @@
+- When you allocate an elastic IP to an EC2 instance the allocated public IP will be removed an replaced. There is no possible way to get it back. <- Exam important.
