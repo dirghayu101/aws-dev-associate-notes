@@ -1,1 +1,8 @@
 - When you allocate an elastic IP to an EC2 instance the allocated public IP will be removed an replaced. There is no possible way to get it back. <- Exam important.
+- AMI is regional (I think this is a limitation because of that snapshot association, although you can replicate them across region.)
+- AMI Baking is a common term used in the cloud community. Configuring an EC2 and creating an AMI for reuse.
+- AMI is immutable.
+- AMI can be copied between regions.
+- The default access permission of an AMI is your account.
+- Don't fall for questions which will ask you to use an AMI for several regions.
+- 
