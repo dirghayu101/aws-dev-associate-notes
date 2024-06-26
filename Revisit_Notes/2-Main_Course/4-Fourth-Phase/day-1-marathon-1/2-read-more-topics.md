@@ -1,0 +1,5 @@
+File to add read more about topics. Or something you want to search on google later.
+
+- https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/configuring-instance-metadata-service.html <- IMDSv2 (About instance meta data service version 2.)
+- https://stackoverflow.com/questions/42314029/whats-special-about-169-254-169-254-ip-address-for-aws and https://en.wikipedia.org/wiki/Link-local_address <- What's so special about 169.254.169.254? Why did AWS chose it over localhost.
+- 

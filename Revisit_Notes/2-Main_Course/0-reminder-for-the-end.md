@@ -1,0 +1,1 @@
+- Do all the quizes again and make notes on mistakes and terminologies you didn't get in those quizzes. Specifically in ec2 section quiz there were a couple of terms that I didn't know the meaning of.

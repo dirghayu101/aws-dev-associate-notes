@@ -1,0 +1,29 @@
+Checklist: These are the video lectures I have to watch.
+
+131  Instance Status Checks & Auto Recovery (7:42)"
+132   Shutdown, Terminate & Termination Protection (5:40)"
+133  Horizontal & Vertical Scaling (11:23)"
+134  Instance Metadata  (15:46)"
+135 Section Quiz - EC2 Basics"
+136 CloudWatch Architecture - PART1 (9:44)"
+137 CloudWatch Architecture - PART2 (9:19)"
+138 CloudWatch Logs Architecture (13:44)"
+139 AWS X-Ray (6:20)"
+140  Lambda & AWS X-ray (16:28)"
+141  VPC Flow logs (9:56)"
+142 Section Quiz - Monitoring and Logging"
+143  Introduction to Containers (17:13)"
+144   Creating 'container of cats' Docker Image (18:15)" -> Demo
+145  ECS - Concepts (10:25)"
+146  ECS - Cluster Mode (13:09)"
+147  Deploying 'container of cats' using Fargate (13:13)"
+148  Elastic Container Registry (ECR) (4:14)"
+149  Kubernetes 101 (11:27)"
+150  Elastic Kubernetes Service (EKS) 101 (6:14)"
+
+Date: 21/June/2024
+Duration 200.19 (3 hours 20 minutes)
+Course progression at the start: 36%
+Course progression at the end: 
+Time start: 10:40 AM
+Time end: 

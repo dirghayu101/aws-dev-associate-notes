@@ -1,0 +1,2 @@
+- https://github.com/SummitRoute/aws_exposable_resources <- services that can be accessed publicly in AWS.
+- 

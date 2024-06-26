@@ -1,10 +1,12 @@
+// JS to get lecture names that need to be completed to reach the completion target.
+
 let regPattern = /\d{1,2}\.\d{1,2}/ //Regex for taking the time from the string.
 
 
-let startLec = 120, endLec, duration = 0, currentProgress = 0, goalProgress = currentProgress + 7;  //Current lecture and last lecture number
+let startLec = 131, endLec, duration = 0, currentProgress = 0, goalProgress = currentProgress + 4;  //Current lecture and last lecture number
 
 // Based on start lec, calculate lectures that need to finished to reach 5% mark.
-startLec = 120, currentProgress = 0, goalProgress = currentProgress + 7, duration = 0; document.querySelectorAll(".lecture-name").forEach((ele, count) => {
+document.querySelectorAll(".lecture-name").forEach((ele, count) => {
     let dumFunc = (time) => Math.trunc(time) + ((time % 1) / .6);
     if(!ele.innerText.includes("Quiz") && count >= startLec &&  currentProgress <= goalProgress){
         let temp = dumFunc(ele.innerText.replace(':', '.').match(/\d{1,2}\.\d{1,2}/));
@@ -18,11 +20,10 @@ startLec = 120, currentProgress = 0, goalProgress = currentProgress + 7, duratio
 let lecNameArr = []; document.querySelectorAll(".lecture-name").forEach((ele, count) => (count >= startLec && count <= endLec) ? lecNameArr.push(count + " " + ele.innerText) : undefined); console.log(lecNameArr);
 
 // Calculate Total Duration of Lectures between start and end lecture.
-duration = 0; startLec = 120; endLec = 142;document.querySelectorAll(".lecture-name").forEach((ele, count) => {
+duration = 0; document.querySelectorAll(".lecture-name").forEach((ele, count) => {
     let dumFunc = (time) => Math.trunc(time) + ((time % 1) / .6);
     (count >= startLec && count <= endLec) ? duration += dumFunc(ele.innerText.replace(':', '.').match(/\d{1,2}\.\d{1,2}/)) : undefined;
     return true;
 }); console.log(duration, duration/50+"%")
 
-// Print all lectures with name and their number
-document.querySelectorAll(".lecture-name").forEach((ele, count) => console.log(ele.innerText, count));
+
