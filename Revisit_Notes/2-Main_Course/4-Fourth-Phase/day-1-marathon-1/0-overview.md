@@ -16,7 +16,7 @@ Checklist: These are the video lectures I have to watch.
 144   Creating 'container of cats' Docker Image (18:15)" -> Demo
 145  ECS - Concepts (10:25)"
 146  ECS - Cluster Mode (13:09)"
-147  Deploying 'container of cats' using Fargate (13:13)"
+147  Deploying 'container of cats' using Fargate (13:13) -> Demo
 148  Elastic Container Registry (ECR) (4:14)"
 149  Kubernetes 101 (11:27)"
 150  Elastic Kubernetes Service (EKS) 101 (6:14)"

@@ -1,11 +1,3 @@
-# Notes from <Video name word to word>:
-- pointers
-- Summary of the video. What did you learn?
-
-# Noted from <video name>
-- pointers
-- Summary of the video. What did you learn?
-
 # 131  Instance Status Checks & Auto Recovery (7:42)"
 - System Status and Instance Status are the 2 checks that AWS perform. Check screenshot. System status is more about hardware but also covers some aspects of software.
 - Instance status is more about networking, kernel and all of that.
@@ -104,19 +96,44 @@
 - Checkout yaml, docker and shell scripts starting with 144.
 
 # 145  ECS - Concepts (10:25)"
+- Elastic Container Service
+- Runs in either EC2 or Fargate mode.
+- ECS Components: Container Definition, Task Definition, Task Roles and Service Definition.
+- Container definitions are used in task definitions to describe the different containers that are launched as part of a task.
+- The details of a task definition which describes the container and volume definitions of an Amazon Elastic Container Service task. You can specify which Docker images to use, the required resources, and other configurations related to launching the task definition through an Amazon ECS service or task.
+- Task Role is just an IAM role.
+- Task doesn't scale by itself, task is not highly available. That's defined in the service definition.
+- Checkout screenshot.
 
 
-# 146  ECS - Cluster Mode (13:09)"
+# 146  ECS - Cluster Mode (13:09)
+- Elastic Container Service
+- EC2 and Fargate mode are the types. Fargate mode has less admin overhead comparatively.
+- EC2 vs ECS (EC2 mode) -> If you are using container, use ECS.
+- In fargate mode you pay for what you consume, but in EC2 you pay regardless for the EC2 provisioned.
+- You use ECS EC2 mode when: your business has large workload and is price conscious. At the same time you should be able to balance out the management overhead.
+- If you have a large workload, but minimizing overhead is a big factor for you then you will pick ECS Fargate mode.
+- For small or burst workload you use fargate mode. Since in fargate mode you pay for what you consume, but in EC2 you pay regardless for the EC2 provisioned.
+- For batch or periodic workload again fargate is better because pay as you use pricing.
 
-
-# 147  Deploying 'container of cats' using Fargate (13:13)"
-
+# 147  Deploying 'container of cats' using Fargate (13:13) -> Demo
+- Elastic Container Service.
+- I defined security group while creating the task in ECS. Since I was using fargate option, an ENI will be created in my VPC with a public IP and a SG controlling ingress and egress in that public IP.
+- I created a task before creating the task definition inside my cluster. In task definition, I just provided my docker hub image URI (this is important, not URL, URI). 
+- The URI I provided was:   docker.io/dirghayu101/containerofcats
+- Point to note: If I use that URI as URL, it won't work. I didn't know how AWS was able to map my URI to dockerhub. What is URI?
+- I deregistered task before deleting the clusters.
+- Checkout Screenshots.
 
 # 148  Elastic Container Registry (ECR) (4:14)"
+- Native docker hub for AWS.
+- Each AWS account has a public and a private registry.
+- Registries can have many repositories.
+- Repositories can have several images.
+- Images can have several tags.
+- Public repos have read only permission. You need to ask for read write permission.
+- In private repos you have to ask for both permission, you have neither by default.
+- Checkout the slide on advantages of ECR. Broadly speaking, because ECR is native to AWS, using this service will enhance the security posture of your cloud environment.
 
-
-# 149  Kubernetes 101 (11:27)"
-
-
-# 150  Elastic Kubernetes Service (EKS) 101 (6:14)"
-
+# 149  Kubernetes 101 (11:27) - 
+- I am gonna cover this very comprehensively. The following is just what was covered in the video, extra reading and reference in ./k8s/*
