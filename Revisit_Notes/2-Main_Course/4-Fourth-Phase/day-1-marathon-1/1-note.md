@@ -137,3 +137,13 @@
 
 # 149  Kubernetes 101 (11:27) - 
 - I am gonna cover this very comprehensively. The following is just what was covered in the video, extra reading and reference in ./k8s/*
+- 
+- 
+
+# 150  Elastic Kubernetes Service (EKS) 101 (6:14)
+
+# URI vs URL:
+
+# Different ways of connecting to an EC2 instant:
+
+# ECS Architecture General:
