@@ -3,7 +3,7 @@
 let regPattern = /\d{1,2}\.\d{1,2}/ //Regex for taking the time from the string.
 
 
-let startLec = 131, endLec, duration = 0, currentProgress = 0, goalProgress = currentProgress + 4;  //Current lecture and last lecture number
+let startLec = 149, endLec, duration = 0, currentProgress = 0, goalProgress = currentProgress + 4;  //Current lecture and last lecture number
 
 // Based on start lec, calculate lectures that need to finished to reach 5% mark.
 document.querySelectorAll(".lecture-name").forEach((ele, count) => {
@@ -25,5 +25,3 @@ duration = 0; document.querySelectorAll(".lecture-name").forEach((ele, count) =>
     (count >= startLec && count <= endLec) ? duration += dumFunc(ele.innerText.replace(':', '.').match(/\d{1,2}\.\d{1,2}/)) : undefined;
     return true;
 }); console.log(duration, duration/50+"%")
-
-
