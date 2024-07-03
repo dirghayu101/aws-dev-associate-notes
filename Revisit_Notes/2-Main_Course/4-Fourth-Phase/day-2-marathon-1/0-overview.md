@@ -29,6 +29,6 @@ Checklist: These are the video lectures I have to watch.
 Date: 21/June/2024
 Duration 210 (3 hours 30 minutes)
 Course progression at the start: 41%
-Course progression at the end: 
-Time start: 
-Time end: 
+Course progression at the end: 47%
+Time start: 2 July, 4 PM
+Time end: 3 July, 1:15 PM
