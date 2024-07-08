@@ -1,0 +1,81 @@
+Parameters:
+  LatestAmiId:
+    Description: "AMI for EC2"
+    Type: 'AWS::SSM::Parameter::Value<AWS::EC2::Image::Id>'
+    Default: '/aws/service/ami-amazon-linux-latest/amzn2-ami-hvm-x86_64-gp2'
+  Message:
+    Description: "Message for HTML page"
+    Default: "Cats are the best"
+    Type: "String"
+Resources:
+  InstanceSecurityGroup:
+    Type: 'AWS::EC2::SecurityGroup'
+    Properties:
+      GroupDescription: Enable SSH and HTTP access via port 22 IPv4 & port 80 IPv4
+      SecurityGroupIngress:
+        - Description: 'Allow SSH IPv4 IN'
+          IpProtocol: tcp
+          FromPort: '22'
+          ToPort: '22'
+          CidrIp: '0.0.0.0/0'
+        - Description: 'Allow HTTP IPv4 IN'
+          IpProtocol: tcp
+          FromPort: '80'
+          ToPort: '80'
+          CidrIp: '0.0.0.0/0'
+  Bucket:
+    Type: 'AWS::S3::Bucket'
+  Instance:
+    Type: 'AWS::EC2::Instance'
+    Metadata:
+      'AWS::CloudFormation::Init':
+        config:
+          packages:
+            yum:
+              httpd: []
+          files:
+            /var/www/html/index.html:
+              content: !Sub |
+                <html><head><title>Amazing test page</title></head><body><h1><center>${Message}</center></h1></body></html>
+          commands:
+            simulatebootstrap:
+              command: "sleep 300"
+          services:
+            sysvinit:
+              httpd:
+                enabled: "true"
+                ensureRunning: "true"
+                files:
+                  - "/var/www/html/index.html"
+    CreationPolicy:
+      ResourceSignal:
+        Timeout: PT15M
+    Properties:
+      InstanceType: "t2.micro"
+      ImageId: !Ref "LatestAmiId"
+      SecurityGroupIds: 
+        - !Ref InstanceSecurityGroup
+      Tags:
+        - Key: Name
+          Value: A4L-UserData Test
+      UserData:
+        Fn::Base64: !Sub |
+          #!/bin/bash -xe 
+          # What is this -xe flag? Check comment below.
+          /opt/aws/bin/cfn-init -v --stack ${AWS::StackId} --resource Instance --region ${AWS::Region}
+          /opt/aws/bin/cfn-signal -e $? --stack ${AWS::StackId} --resource Instance --region ${AWS::Region}
+
+comments: |
+  In a Bash script, `#!/bin/bash -xe` at the beginning of a script is called a shebang or hashbang line. Let's break down what each part means:
+  1. **#!**: This sequence is called the shebang and it is used by the operating system to determine which interpreter to use to execute the script. In this case, `/bin/bash` specifies that the script should be interpreted using the Bash shell.
+
+  2. **-x**: This option is passed to Bash as an argument. It enables **debug mode**, which means that Bash will print each command it executes to standard error (stderr) before executing it. This can be very useful for debugging scripts, as it allows you to see exactly what commands are being executed and helps to trace any issues.
+
+  3. **-e**: This option is also passed to Bash. It causes the script to **exit immediately** if any command fails (i.e., returns a non-zero exit status). This helps ensure that errors are caught early and the script doesn't continue executing with potentially incorrect or incomplete results.
+
+  So, when you see `#!/bin/bash -xe` at the top of a Bash script, it means the script will:
+  - Be interpreted using the Bash shell (`/bin/bash`).
+  - Print each command before executing it (`-x` option).
+  - Exit immediately if any command fails (`-e` option).
+
+  This combination (`-xe`) is commonly used in Bash scripts, especially for debugging purposes and for ensuring robust error handling.
