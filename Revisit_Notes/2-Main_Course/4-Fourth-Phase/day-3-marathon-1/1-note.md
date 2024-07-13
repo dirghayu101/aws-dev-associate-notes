@@ -105,32 +105,61 @@
 - I didn't understand it completely, but here is what's happening. A listener will be keeping a check on parameters in the stack, and if those parameters change because of stack updates, certain code will run, which is defined in the yaml file. This can be a really powerful feature.
 
 
-# CloudFormation ChangeSets
-- 
+# CloudFormation ChangeSets -> Has a demo component.
+- It is just a tool you can use to see what updates you are making better.
+- When you need to update a stack, understanding how your changes will affect running resources before you implement them can help you update stacks with confidence. 
+- Change sets allow you to preview how proposed changes to a stack might impact your running resources, for example, whether your changes will delete or replace any critical resources, AWS CloudFormation makes the changes to your stack only when you decide to execute the change set, allowing you to decide whether to proceed with your proposed changes or explore other changes by creating another change set.
 
 
 # CloudFormation Custom Resources
+- Custom resources enable you to write custom provisioning logic in templates that AWS CloudFormation runs anytime you create, update (if you changed the custom resource), or delete stacks
+- Checkout Screenshots.
 
 
+# CloudFormation Custom Resources-PART1 -> Demo
+- Checkout the associated resource directory yaml files.
+- Pretty straightforward. Cloudformation cannot delete an S3 bucket with any object inside it.
+- 
 
-# CloudFormation Custom Resources-PART1
 
-
-
-# CloudFormation Custom Resources-PART2
+# CloudFormation Custom Resources-PART2 -> Demo
+- Checkout the associated resource directory yaml files.
+- Checkout customresource.yaml
+- This is the custom resource definition:
+  copyanimalpics:
+    Type: "Custom::S3Objects"
+    Properties:
+      ServiceToken: !GetAtt CopyS3ObjectsFunction.Arn
+      SourceBucket: "cl-randomstuffforlessons"
+      SourcePrefix: "customresource"
+      Bucket: !Ref animalpics
+- Here ServiceToken is referring to the lambda function that has code to execute upon creation or deletion API calls.
+- SourceBucket and SourcePrefix are two attributes defined in the lambda function whose values are being supplied in the custom resource.
+- This is often asked in exams.
 
 
 
 # R53 Public Hosted Zones
-
-
+- Hosted Zones are Globally resilient. Multiple regional outage won't affect it.
+- Hosted Zones are authoritative for a domain. -> Main authority for any cache change.
+- Different DNS record types: www, mx, txt, cname
+- A Record: An A record or a DNS host record points a hostname or domain to an IPv4 address. For example, it converts hostinger.com to 104.19.184.120. 
+- An AAAA record works similarly, but it transforms a hostname to an IPv6 address instead.
+- An SRV record connects a hostname to a particular service. Compared to other DNS records, SRV records store more information, including the port number. 
+- A TXT record allows domain administrators to include readable notes for both humans and machines. It doesn’t directly impact your DNS settings, but it tells other parties important information about your domain.
+- An MX record, which stands for mail exchanger, identifies a mail server used to process incoming emails received by a particular domain name.
+- A CNAME record or a “canonical name” record establishes a particular domain as an alias for another domain. When end-users enter one of the alias domain names in their web browsers, they’ll be taken to the same IP address.
+- Each time you modify or add a new DNS record, there will be a period where the DNS record is being updated across the world’s servers. This is called the DNS propagation period.
+- Walking the DNS tree.
+- A public hosted zone is a container that holds information about how you want to route traffic on the internet for a specific domain which is accessible from the public internet
 
 # R53 Private Hosted Zones
-
+- Private hosted zone need to be associated to a VPC to use it. Note the keyword associate here.
+- A private hosted zone is a container that holds information about how you want Amazon Route 53 to respond to DNS queries for a domain and its subdomains within one or more VPCs that you create with the Amazon VPC service.
 
 
 # CNAME vs R53 Alias
-
+- 
 
 
 # Simple Routing

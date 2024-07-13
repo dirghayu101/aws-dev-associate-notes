@@ -11,12 +11,12 @@ Checklist: These are the video lectures I have to watch.
 - CloudFormation Stack Roles
 - CloudFormation Init
 - CloudFormation cfn-hup
-- wait conditions, cfnsignal, cfninit and cfnhup-PART1
-- wait conditions, cfnsignal, cfninit and cfnhup-PART2
-- CloudFormation ChangeSets
+- wait conditions, cfnsignal, cfninit and cfnhup-PART1 -> Demo
+- wait conditions, cfnsignal, cfninit and cfnhup-PART2 -> Demo
+- CloudFormation ChangeSets -> Partial Demo
 - CloudFormation Custom Resources
-- CloudFormation Custom Resources-PART1
-- CloudFormation Custom Resources-PART2
+- CloudFormation Custom Resources-PART1 -> Demo
+- CloudFormation Custom Resources-PART2 -> Demo
 - R53 Public Hosted Zones
 - R53 Private Hosted Zones
 - CNAME vs R53 Alias
