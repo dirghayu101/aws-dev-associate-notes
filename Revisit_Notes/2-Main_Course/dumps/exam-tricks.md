@@ -14,4 +14,7 @@
 
 - If the question says cost effective, it most likely means that you have to solve the problem using the existing service as new service will introduce new charges.
 
-- 35-> Secret Manager vs Parameter Store use cases and differences? -> Many many questions.
+- 35-> Secret Manager vs Parameter Store use cases and differences? ->m Many many questions.
+
+- Least Operational Efforts - try to use existing service, not adding extra. -> Secrets Manager wasn't used to store credentials because it was an extra service in one scenario.
+
