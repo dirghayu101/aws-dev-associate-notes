@@ -11,3 +11,7 @@
 - Fastest Response is always given by Global Secondary Index.
 
 - Exponential Backoff for any throughput related DynamoDB error.
+
+- If the question says cost effective, it most likely means that you have to solve the problem using the existing service as new service will introduce new charges.
+
+- 35-> Secret Manager vs Parameter Store use cases and differences? -> Many many questions.

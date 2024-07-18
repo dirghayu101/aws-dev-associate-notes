@@ -60,4 +60,44 @@
 
 - 28-> Amazon Kinesis Data Firehose? -> Exponential Backoff? -> Amazon SQS? -> AWS SDK error debugging functionalities? -> Exponential Backoff for any throughput related DynamoDB error. -> In this question: ThrottlingException errors: resolve Exponential Backoff.
 
-- 29-> 
+- 29-> SNS Topic? -> Amazon Aurora DB? -> IAM Database Authentication? 
+
+- 30-> Amazon CloudFront? -> Amazon Lambda@Edge? 
+
+- 31-> TTL feature DynamoDB? -> Cron Job EC2 possible use cases (any automation?)?
+
+- 32-> Elastic Beanstalk? -> Deployment types: Canary, In-place, All-at-once, in-place, blue/green, immutable deployments? -> Read article deploying applications to EBS Environments.? -> Rollback process?
+
+- 33-> Unauthenticated Role? -> Temporary Credentials in Secret Manager?
+
+- 34-> ProvisionedThroughputExceededException error in DynamoDB? -> DynamoDB Accelerator Cluster (DAX)? -> Distributing reads and writes between two table? -> AWS SDKs for DynamoDB? -> If the question says cost effective, it most likely means that you have to solve the problem using the existing service as new service will introduce new charges. 
+
+- 35-> Secret Manager vs Parameter Store use cases and differences? -> SNS topic?
+
+- 36-> BatchWriteItem API in DynamoDB?
+
+- 37-> Lambda Layers? -> Runtime Environment? 
+
+- 38-> AWS Step Functions? -> The UI team wants the API to provide an immediate response so that the UI can display a message while the files are being processed. Read more about this and different possible ways to achieve this? -> X-Amz-Invocation-Type header with a static value of 'Event'? -> Configure the maximum age of the event in lambda? -> API Gateway timeout value and how it relates with lambda function timeout value? -> X-Amz-Target header with a static value of 'Async' in the integration request? -> Read article: Set up asynchronous invocation of the backend lambda function.
+
+- 40-> DeleteItem vs GetItem vs Get Records vs PutItem vs UpdateTable vs UpdateItem vs DescribeTable in DynamoDB and other commonly used functions?
+
+- 41-> .ebextensions/directory of the application source bundle of EBS? -> Elastic Beanstalk? -> namespace in EBS? -> config extension files? -> option_settings?
+
+- 42-> AWS SDK outside the Lambda Handler Function? ->  Take advantage of runtime environment reuses primarily.
+
+- 43-> Kubernetes cron job? -> EventBridge scheduled event? -> AWS Batch Jobs and Batch job queue?
+
+- 44-> Bucket Policy? Principal? -> Service Based Link? -> CloudFormation Service Role? 
+
+- 45-> Different Identities in IAM? -> Most secure way of accessing S3 bucket objects? -> Secret key and access key use is not considered the most secure way. They will be eliminated in questions like those. 
+
+- 46-> AWS Encryption SDK? -> Data Encryption Keys? 
+
+- 47-> Trust policy that specifies the EC2 service principal? -> Trust relationship between the roles and dynamodb.amazonaws.com? -> How to use trust policies within IAM role?
+
+- 48-> sam local generate-event? -> Unit testing and testing types? -> AWS CDK?
+
+- 49-> EBS application maintain full capacity? -> Blue/green deployment? Immutable Deployment? Rolling with additional Batch deployment? Blue Green vs Immutable Deployment? Immutable use less resources comparatively.
+
+- 50-> AWS CloudWatch vs AWS CloudTrail vs AWS X-Ray vs AWS Inspector Agents? -> AWS Inspector Agents vs AWS X-ray?

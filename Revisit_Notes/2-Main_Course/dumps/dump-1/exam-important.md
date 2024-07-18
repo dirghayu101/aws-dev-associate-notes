@@ -20,4 +20,12 @@
 
 - Exponential Backoff.
 
-- 
+- 32-> Elastic Beanstalk? -> Deployment types: Canary, In-place, All-at-once, in-place, blue/green, immutable deployments? -> Read article deploying applications to EBS Environments.? -> Rollback process?
+
+- 35-> Secret Manager vs Parameter Store use cases and differences? -> SNS topic?
+
+- Secret key and access key use is not considered the most secure way. They will be eliminated in questions asking for the most secure way.
+
+- 49-> EBS application maintain full capacity? -> Blue/green deployment? Immutable Deployment? Rolling with additional Batch deployment? Blue Green vs Immutable Deployment? Immutable use less resources comparatively.
+
+- 50-> AWS CloudWatch vs AWS CloudTrail vs AWS X-Ray vs AWS Inspector Agents?
