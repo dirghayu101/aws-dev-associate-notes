@@ -47,3 +47,21 @@
 - 99-> Amazon CloudFront with Lambda@Edge to update the requests to add cookies? -> Route 53? -> ALB Routing rule with a condition that looks for a cookie named version that has a value of beta? -> Application Load Balancer Routing Policy?
 
 - 100-> s3:x-amz-acl condition in bucket policy? -> aws:SecureTransport condition?
+
+- 101-> AWS Elastic Beanstalk? -> Environment setup in elastic beanstalk? -> Deployment method that offers fastest deployment? -> All at once provides the fastest deployment -> All instances updated simultaneously.
+
+- 102-> AWS CodeArtifact repository? -> Amazon Elastic File System? 
+
+- 103-> AMI changes between regions and copying an AMI from one region to the other?
+
+- 104-> AWSLambdaBasicExecutionRole, AWSLambdaVPCAccessExecutionRole? -> Interface VPC Endpoint and its policy?
+
+- 105-> Amazon Cognito User Pool vs Amazon Cognito Identity Pool? -> Amazon CloudFront Distribution to allow unauthenticated users? 
+
+- 106-> Amazon Marcie, Amazon Athena? -> SensitiveData:S3Object/Financial in Marcie?
+
+- 107-> Amazon Simple Queue Service? -> Concurrency of lambda function? -> Declaring outside the handler function to reduce number of instances of DB connection created. -> max_user_connections parameter of RDS Cluster? -> Why is RDS Cluster? -> How does RDS proxy works and solves the problem of multiple DB connections?
+
+- 108-> AWS Security Token Service? -> Origin set to S3 bucket in CloudFront? -> What does CloudFront really do? -> CloudFront functions have an execution time of few milliseconds. This makes them less functional. Lambda@Edge functions vs CloudFront functions?
+
+- 109-> AWS Directory Service? -> Cognito User vs Identity Pool?
